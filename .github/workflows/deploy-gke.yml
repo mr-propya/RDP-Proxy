@@ -44,7 +44,7 @@ jobs:
         run: |-
           docker build . -t "$DOCKER_REPO"
 
-      -name: Push docker image to gcloud artifactory
+      - name: Push docker image to gcloud artifactory
         run: |-
           gcloud auth configure-docker us-docker.pkg.dev
           docker push "$DOCKER_REPO"
