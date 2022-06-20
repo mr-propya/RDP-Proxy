@@ -26,10 +26,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
 
-       - id: 'auth'
-         uses: 'google-github-actions/auth@v0'
-         with:
-           credentials_json: '${{ secrets.GKE_SERVICE_ACCOUNT }}'
+      - id: 'auth'
+        uses: 'google-github-actions/auth@v0'
+        with:
+          credentials_json: '${{ secrets.GKE_SERVICE_ACCOUNT }}'
 
       # Setup gcloud CLI
       - name: Set up Cloud SDK
