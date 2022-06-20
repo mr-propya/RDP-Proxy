@@ -10,7 +10,7 @@ env:
   GKE_CLUSTER: autopilot-cluster-rdp
   GKE_ZONE: asia-south1
   DEPLOYMENT_NAME: rdp-proxy-deployment
-  DOCKER_REPO: ${{ secrets.GCP_ARTIFACTORY_PATH }}
+  DOCKER_REPO: us-docker.pkg.dev/rdpproxy-353911/rdp-proxy-repo
 
 jobs:
   setup-and-deploy:
