@@ -43,10 +43,12 @@ jobs:
       - name: Build docker image
         run: |-
           docker build . -t "$DOCKER_REPO"
+          docker image list
 
       - name: Push docker image to gcloud artifactory
         run: |-
           gcloud auth configure-docker us-docker.pkg.dev
+          echo $DOCKER_REPO
           docker push "$DOCKER_REPO"
 
 #      - name: Deploy
